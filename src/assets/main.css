@@ -1,5 +1,20 @@
-@import './base.css';
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('font/GothamProBold.eot');
+  src:
+    url('font/GothamProBold.eot?#iefix') format('embedded-opentype'),
+    url('font/GothamProBold.woff') format('woff'),
+    url('font/GothamProBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@import 'tailwindcss';
+/* @import './base.css'; */
+@import './style.css';
+/* 
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -32,4 +47,4 @@ a,
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
-}
+} */
