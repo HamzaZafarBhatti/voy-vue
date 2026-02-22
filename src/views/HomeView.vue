@@ -2,8 +2,8 @@
 import Footer from '@/components/Footer.vue'
 import HeroShop from '@/components/HeroShop.vue'
 import IconVoyShop from '@/components/icons/IconVoyShop.vue'
-import SliderCreators from '@/components/shop/SliderCreators.vue'
-import TopCreators from '@/components/shop/TopCreators.vue'
+import SliderCreators from '@/components/home/SliderCreators.vue'
+import TopCreators from '@/components/home/TopCreators.vue'
 </script>
 
 <template>

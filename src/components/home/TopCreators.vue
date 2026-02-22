@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CreatorCard from '@/components/shop/CreatorCard.vue'
+import CreatorCard from '@/components/home/CreatorCard.vue'
 
 const creators = [
   [

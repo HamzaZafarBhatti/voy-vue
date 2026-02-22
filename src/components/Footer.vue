@@ -27,10 +27,10 @@ let currentRouteName = router.currentRoute.value.name
           <IconSocial v-else />
         </RouterLink>
         <RouterLink
-          to="/card"
+          to="/wallet"
           class="flex flex-col items-center text-gray-400 hover:text-purple-600 transition"
         >
-          <IconCardActive v-if="currentRouteName === 'card'" />
+          <IconCardActive v-if="currentRouteName === 'wallet'" />
           <IconCard v-else />
         </RouterLink>
       </div>
