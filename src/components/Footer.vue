@@ -1,14 +1,16 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import IconCard from './icons/IconCard.vue'
 import IconCardActive from './icons/IconCardActive.vue'
 import IconShop from './icons/IconShop.vue'
 import IconShopActive from './icons/IconShopActive.vue'
 import IconSocial from './icons/IconSocial.vue'
 import IconSocialActive from './icons/IconSocialActive.vue'
-import { useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 
-const router = useRouter()
-let currentRouteName = router.currentRoute.value.name
+const route = useRoute()
+
+const currentRouteName = computed(() => String(route.name))
 </script>
 
 <template>

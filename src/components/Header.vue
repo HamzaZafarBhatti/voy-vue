@@ -1,15 +1,24 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import IconBadge from './icons/IconBadge.vue'
 import IconBell from './icons/IconBell.vue'
 import IconCart from './icons/IconCart.vue'
 import IconGiftCard from './icons/IconGiftCard.vue'
 import IconHeader1 from './icons/IconHeader1.vue'
 import IconMessage from './icons/IconMessage.vue'
+import IconArrowBack from './icons/IconArrowBack.vue'
+
+const props = defineProps<{
+  routeName: string
+}>()
+
+const showSearch = computed(() => ['social', 'shop', 'wallet'].includes(props.routeName))
 </script>
 <template>
   <header class="w-full flex items-center text-white gap-2">
     <!-- Left: Search / Explore -->
     <div
+      v-if="showSearch"
       class="flex items-center gap-3 border border-[#dccee880] rounded-[10px] px-2.5 py-2 min-w-[161px] w-[161px]"
     >
       <span
@@ -24,6 +33,10 @@ import IconMessage from './icons/IconMessage.vue'
       <div class="ml-auto">
         <font-awesome-icon :icon="['fas', 'magnifying-glass']" class="text-[#DCCEE8]" />
       </div>
+    </div>
+    <div v-else class="flex items-center gap-[8.84px] px-2.5 py-2 max-w-[161px] w-[161px]">
+      <IconArrowBack />
+      Back
     </div>
 
     <!-- Right: Icons -->

@@ -148,6 +148,10 @@ body {
   background: linear-gradient(to right, #d97dcc 0%, #9542ff 65%) border-box;
 }
 
+.border-top-gradient {
+  border-top: 1.5px solid transparent;
+  background: linear-gradient(to right, #d97dcc 0%, #9542ff 65%) border-box;
+}
 .no-scrollbar {
   overflow-y: auto;
   overflow-x: hidden;
@@ -159,4 +163,42 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   width: 0 !important;
   height: 0 !important;
+}
+
+.hero-bg {
+  background-image: url('img/shop-hero-bg.png');
+  background-size: cover;
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+}
+
+/* .circle{
+  width:110px;
+  height:110px;
+  background:#e6cfa5;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-weight:bold;
+  color:black;
+  border:4px solid transparent;
+} */
+
+.category.active .circle {
+  border-color: #c084fc;
+}
+
+.chip {
+  padding: 6px 14px;
+  border: 1px solid #aaa;
+  border-radius: 999px;
+}
+
+.subSwiper .swiper-slide {
+  width: auto !important;
+}
+.border-stoke {
+  box-shadow: inset 0 0 0 1px rgba(220, 206, 232, 0.3);
 }

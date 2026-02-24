@@ -1,10 +1,15 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { computed } from 'vue'
+import { RouterView, useRoute } from 'vue-router'
 import Header from './components/Header.vue'
+
+const route = useRoute()
+
+const routeName = computed(() => String(route.name))
 </script>
 
 <template>
-  <Header />
+  <Header :routeName="routeName" />
   <RouterView />
 </template>
 
