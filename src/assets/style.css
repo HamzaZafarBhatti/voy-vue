@@ -202,3 +202,6 @@ body {
 .border-stoke {
   box-shadow: inset 0 0 0 1px rgba(220, 206, 232, 0.3);
 }
+.subCatSwiper .swiper-slide{
+  width: auto;
+}

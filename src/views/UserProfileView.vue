@@ -53,8 +53,8 @@
                 >
                   Jess Baker
                 </h3>
-                <P class="text-[9px] font-medium leading-none text-white leading-[14px]"
-                  >@jess_baker</P
+                <p class="text-[9px] font-medium leading-none text-white leading-[14px]"
+                  >@jess_baker</p
                 >
               </div>
               <div class="social flex justify-between">
@@ -105,7 +105,7 @@
                 </div>
                 <div class="flex justify-center flex-col flex- gap-[5px] items-center">
                   <h4 class="font-inter font-bold text-[17.6px] text-white leading-none">100</h4>
-                  <P class="font-inter font-bold text-[11.6px] text-white">Followers</P>
+                  <p class="font-inter font-bold text-[11.6px] text-white">Followers</p>
                 </div>
 
                 <div class="flex justify-center flex-col flex- gap-[5px] items-center">
@@ -122,7 +122,11 @@
           <div
             class="flex justify-around items-center relative mt-2 max-w-[161px] mx-auto pb-[9px] border-b-[1px] border-white"
           >
-            <button id="tab1" class="tab-btn text-pink-400 text-3xl">
+            <button
+              class="tab-btn text-3xl"
+              :class="activeTab === 1 ? 'text-pink-400' : 'text-white'"
+              @click="activeTab = 1"
+            >
               <svg
                 width="20"
                 height="20"
@@ -153,7 +157,11 @@
               </svg>
             </button>
 
-            <button id="tab2" class="tab-btn text-white text-3xl">
+            <button
+              class="tab-btn text-3xl"
+              :class="activeTab === 2 ? 'text-pink-400' : 'text-white'"
+              @click="activeTab = 2"
+            >
               <svg
                 width="21"
                 height="20"
@@ -201,15 +209,15 @@
 
             <!-- Pink underline -->
             <div
-              id="underline"
-              class="absolute bottom-[-1px] left-0 w-1/2 h-[1px] bg-[#FF51EE] transition-all duration-300"
+              class="absolute bottom-[-1px] w-1/2 h-[1px] bg-[#FF51EE] transition-all duration-300"
+              :class="activeTab === 1 ? 'left-0' : 'left-1/2'"
             ></div>
           </div>
         </div>
       </div>
 
       <!-- Tab 1 Content Social -->
-      <div id="content1" class="mt-2.5">
+      <div id="content1" class="mt-2.5" v-if="activeTab === 1">
         <div class="w-full text-white">
           <div class="grid grid-cols-3 md:grid-cols-3 gap-[10.5px] mb-[10.5px]">
             <div class="relative rounded-[8.84px] overflow-hidden relative">
@@ -298,7 +306,7 @@
       </div>
 
       <!-- Tab 2 Content shop -->
-      <div id="content2" class="hidden mt-2.5">
+      <div id="content2" class="mt-2.5" v-if="activeTab === 2">
         <div class="w-full mx-auto mt-2.5 hero-sec">
           <div
             class="rounded-ss-2xl rounded-se-[35px] rounded-ee-2xl rounded-es-[35px] !pr-[12px] pb-0 border-2 border-[#AF74E5] bg-[#9450D3] shadow-hero pr-0 overflow-hidden"
@@ -361,113 +369,7 @@
             </div>
 
             <!-- ===== CATEGORIES SLIDER ===== -->
-            <div class="swiper categorySwiper mt-[15px]">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide category active" data-cat="1">
-                  <div class="w-[85px] h-[85px]">
-                    <div
-                      class="block rounded-full h-full relative border-2 border-[#FEE5BC] rounded-full"
-                    >
-                      <div
-                        class="bg-[#FEE5BC] rounded-full w-full h-full border-[3.5px] border-[#171635] font-AlteHaas-Grotesk text-[#000000] text-[10px] leading-[130%] flex items-center text-center justify-center"
-                      >
-                        Outwear & Jackets
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide category" data-cat="2">
-                  <div class="w-[85px] h-[85px]">
-                    <div
-                      class="block rounded-full h-full relative border-2 border-[#9542FF] rounded-full"
-                    >
-                      <div
-                        class="bg-[#FEE5BC] rounded-full w-full h-full border-[3.5px] border-[#171635] font-AlteHaas-Grotesk text-[#000000] text-[10px] leading-[130%] flex items-center text-center justify-center"
-                      >
-                        Accessories
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide category" data-cat="3">
-                  <div class="w-[85px] h-[85px]">
-                    <div
-                      class="block rounded-full h-full relative border-2 border-[#FEE5BC] rounded-full"
-                    >
-                      <div
-                        class="bg-[#FEE5BC] rounded-full w-full h-full border-[3.5px] border-[#171635] font-AlteHaas-Grotesk text-[#000000] text-[10px] leading-[130%] flex items-center text-center justify-center"
-                      >
-                        Bottoms
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide category" data-cat="4">
-                  <div class="w-[85px] h-[85px]">
-                    <div
-                      class="block rounded-full h-full relative border-2 border-[#FEE5BC] rounded-full"
-                    >
-                      <div
-                        class="bg-[#FEE5BC] rounded-full w-full h-full border-[3.5px] border-[#171635] font-AlteHaas-Grotesk text-[#000000] text-[10px] leading-[130%] flex items-center text-center justify-center"
-                      >
-                        T-Shirts
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- ===== SUBCATEGORIES ===== -->
-            <div class="swiper subSwiper mt-[14px]">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div
-                    class="px-[8px] py-[5.2px] rounded-full border border-[#FF77F1] whitespace-nowrap w-auto text-[#AEAEAE] text-[10px] leading-none font-AlteHaas-Grotesk"
-                  >
-                    Socks
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div
-                    class="px-[8px] py-[5.2px] rounded-full border border-[#AEAEAE] whitespace-nowrap w-auto text-[#AEAEAE] text-[10px] leading-none font-AlteHaas-Grotesk"
-                  >
-                    Men’s Ties
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div
-                    class="px-[8px] py-[5.2px] rounded-full border border-[#AEAEAE] whitespace-nowrap w-auto text-[#AEAEAE] text-[10px] leading-none font-AlteHaas-Grotesk"
-                  >
-                    Scarves
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div
-                    class="px-[8px] py-[5.2px] rounded-full border border-[#AEAEAE] whitespace-nowrap w-auto text-[#AEAEAE] text-[10px] leading-none font-AlteHaas-Grotesk"
-                  >
-                    Men’s Gloves & Mittens
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div
-                    class="px-[8px] py-[5.2px] rounded-full border border-[#AEAEAE] whitespace-nowrap w-auto text-[#AEAEAE] text-[10px] leading-none font-AlteHaas-Grotesk"
-                  >
-                    Skullies
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div
-                    class="px-[8px] py-[5.2px] rounded-full border border-[#AEAEAE] whitespace-nowrap w-auto text-[#AEAEAE] text-[10px] leading-none font-AlteHaas-Grotesk"
-                  >
-                    Caps
-                  </div>
-                </div>
-              </div>
-            </div>
+          <CategorySlider />
 
             <!-- filters -->
             <div class="filters flex gap-[10px] mt-[22px]">
@@ -678,27 +580,27 @@
               </button>
 
               <button
-                class="border-[3px] border-[#817F8D] px-[9px] py-[4.5px] rounded-[4.5px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[15px]"
+                class="border-[3px] border-[#817F8D] px-[9px] py-[4.5px] rounded-[4px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[16px]"
               >
                 1
               </button>
               <button
-                class="border-[3px] border-[#817F8D] px-[9px] py-[4.5px] rounded-[4.5px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[15px]"
+                class="border-[3px] border-[#817F8D] px-[9px] py-[4.5px] rounded-[4px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[16px]"
               >
                 2
               </button>
               <button
-                class="border-[3px] border-[#817F8D] px-[9px] py-[4.5px] rounded-[4.5px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[15px]"
+                class="border-[3px] border-[#817F8D] px-[9px] py-[4.5px] rounded-[4px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[16px]"
               >
                 3
               </button>
               <button
-                class="border-[3px] border-[#817F8D] px-[9px] py-[4.5px] rounded-[4.5px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[15px]"
+                class="border-[3px] border-[#817F8D] px-[9px] py-[4.5px] rounded-[4px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[16px]"
               >
                 4
               </button>
               <button
-                class="border-[3px] border-[#817F8D] px-[9px] py-[4.5px] rounded-[4.5px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[15px]"
+                class="border-[3px] border-[#817F8D] px-[9px] py-[4.5px] rounded-[4px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[16px]"
               >
                 1220
               </button>
@@ -730,3 +632,8 @@
     </div>
   </main>
 </template>
+<script setup>
+import CategorySlider from '@/components/userProfile/CategorySlider.vue';
+import { ref } from 'vue'
+const activeTab = ref(1)
+</script>
