@@ -1,20 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Hind:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ponnala&display=swap');
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("font/GothamProBold.eot");
+  src:
+    url("font/GothamProBold.eot?#iefix") format("embedded-opentype"),
+    url("font/GothamProBold.woff") format("woff"),
+    url("font/GothamProBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham Pro light";
+  src: url("font/GothamProLight.eot");
+  src:
+    url("font/GothamProLight.eot?#iefix") format("embedded-opentype"),
+    url("font/GothamProLight.woff") format("woff"),
+    url("font/GothamProLight.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AlteHaas Grotesk Bold";
+  src:
+    url("font/AlteHaasGroteskBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .font-gotham-pro {
-  font-family: 'Gotham Pro', sans-serif;
+  font-family: "Gotham Pro", sans-serif;
 }
-.font-noto-sans {
-  font-family: 'Noto Sans', sans-serif;
-}
-.font-hind {
-  font-family: 'Hind', sans-serif;
-}
-.font-inter {
-  font-family: 'Inter', sans-serif;
+.font-gotham-pro-light {
+  font-family: "Gotham Pro light", sans-serif;
 }
 
+.font-noto-sans {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.font-hind {
+  font-family: "Hind", sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+.font-Ponnala {
+  font-family: "Ponnala", system-ui;
+}
+.font-DM-sans {
+   font-family: "DM Sans", sans-serif;
+}
+
+.font-AlteHaas-Grotesk {
+  font-family: "AlteHaas Grotesk Bold", sans-serif;
+}
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
