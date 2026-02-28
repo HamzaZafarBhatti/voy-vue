@@ -47,7 +47,7 @@ const activeCategory = ref("Men's Clothing")
 </script>
 
 <template>
-  <div class="w-full mx-auto mt-2.5 hero-sec">
+  <div class="w-full mx-auto hero-sec">
     <div
       class="rounded-ss-2xl rounded-se-[35px] rounded-ee-2xl rounded-es-[35px] !pr-[12px] pb-0 border-2 border-[#AF74E5] bg-[#9450D3] shadow-hero pr-0 overflow-hidden"
     >
@@ -58,11 +58,11 @@ const activeCategory = ref("Men's Clothing")
           </span>
           <div class="pl-4">
             <h3
-              class="font-bold text-base leading-[108%] auth-name text-white mb-[13px] font-gotham-pro"
+              class="font-bold text-base leading-[108%] auth-name text-white mb-[13px]"
             >
               Jess Baker Store
             </h3>
-            <p class="text-[14px] font-gotham-pro font-bold leading-[108%] mb-2">
+            <p class="text-[14px] font-bold leading-[108.7%]">
               Shopping here supports this creator’s journey
             </p>
           </div>
@@ -80,12 +80,12 @@ const activeCategory = ref("Men's Clothing")
   <div class="text-white mt-2.5 relative">
     <div id="shopMenu" class="shop-menu relative" :class="{ hidden: isSearchOpen }">
       <!-- ===== TOP BAR ===== -->
-      <div class="flex items-center justify-between bg-[#3C0A6D] px-2.5 py-[9.5px]">
+      <div class="flex items-center justify-between bg-[#3C0A6D] px-2.5 py-[9px]">
         <!-- Menu Icon -->
         <button id="menuBtn" class="text-2xl" @click="openMenu">
           <img src="/images/cat-menu-bar.svg" class="w-[21px] h-[21px]" />
         </button>
-        <h2 class="text-lg font-normal font-inter leading-[22px]">Men's clothing</h2>
+        <h2 class="text-lg font-normal leading-[22px]">Men's clothing</h2>
         <!-- Search Button -->
         <button id="searchBtn" class="text-xl" @click="openSearch">
           <svg
@@ -186,7 +186,7 @@ const activeCategory = ref("Men's Clothing")
         <input
           type="text"
           placeholder="Search Jess Baker Store"
-          class="flex-1 bg-transparent outline-none text-gray-200 placeholder-[#8C6CAA] font-gotham-pro-light font-light text-[14px] px-5"
+          class="flex-1 bg-transparent outline-none text-gray-200 placeholder-[#8C6CAA]-light font-light text-[14px] px-5"
         />
         <button
           id="closeSearch"
@@ -219,15 +219,15 @@ const activeCategory = ref("Men's Clothing")
           <img src="/images/p-1.jpg" class="w-full object-cover" />
           <div class="pt-[11px] px-[6px] pb-[6px]">
             <p
-              class="text-[#000000] text-[13.5px] mb-[6px] font-Ponnala overflow-hidden text-ellipsis whitespace-nowrap"
+              class="text-[#000000] text-[13.5px] mb-[6px] font-Ponnala overflow-hidden text-ellipsis whitespace-nowrap leading-[24px] tracking-[-0.17px]"
             >
               Glamorous black dress
             </p>
             <div class="flex justify-between items-center">
               <span class="text-[#6012B1] font-bold text-xl leading-[30px]">$25.00</span>
               <div>
-                <span class="block text-[#151515] text-[8px] leading-[14px]">Approx</span>
-                <span class="text-[13px] font-semibold text-[#151515] leading-[20px]">₵300</span>
+                <div class="block text-[#151515] text-[8px]   tracking-[-0.17px] mb-0">Approx</div>
+                <div class="text-[13px] font-semibold text-[#151515] leading-[20px]">₵300</div>
               </div>
             </div>
           </div>
@@ -238,15 +238,15 @@ const activeCategory = ref("Men's Clothing")
           <img src="/images/p-2.jpg" class="w-full object-cover" />
           <div class="pt-[11px] px-[6px] pb-[6px]">
             <p
-              class="text-[#000000] text-[13.5px] mb-[6px] font-Ponnala overflow-hidden text-ellipsis whitespace-nowrap"
+              class="text-[#000000] text-[13.5px] mb-[6px] font-Ponnala overflow-hidden text-ellipsis whitespace-nowrap leading-[24px] tracking-[-0.17px]"
             >
               Women's Fashionable Denim...
             </p>
             <div class="flex justify-between items-center">
               <span class="text-[#6012B1] font-bold text-xl leading-[30px]">$30.00</span>
               <div>
-                <span class="block text-[#151515] text-[8px] leading-[14px]">Approx</span>
-                <span class="text-[13px] font-semibold text-[#151515] leading-[20px]">₵300</span>
+                <div class="block text-[#151515] text-[8px]   tracking-[-0.17px] mb-0">Approx</div>
+                <div class="text-[13px] font-semibold text-[#151515] leading-[20px]">₵300</div>
               </div>
             </div>
           </div>
@@ -257,15 +257,15 @@ const activeCategory = ref("Men's Clothing")
           <img src="/images/p3.png" class="w-full object-cover" />
           <div class="pt-[11px] px-[6px] pb-[6px]">
             <p
-              class="text-[#000000] text-[13.5px] mb-[6px] font-Ponnala overflow-hidden text-ellipsis whitespace-nowrap"
+              class="text-[#000000] text-[13.5px] mb-[6px] font-Ponnala overflow-hidden text-ellipsis whitespace-nowrap leading-[24px] tracking-[-0.17px]"
             >
               Men's Fashionable Denim...
             </p>
             <div class="flex justify-between items-center">
               <span class="text-[#6012B1] font-bold text-xl leading-[30px]">$35.00</span>
               <div>
-                <span class="block text-[#151515] text-[8px] leading-[14px]">Approx</span>
-                <span class="text-[13px] font-semibold text-[#151515] leading-[20px]">₵300</span>
+                <div class="block text-[#151515] text-[8px]   tracking-[-0.17px] mb-0">Approx</div>
+                <div class="text-[13px] font-semibold text-[#151515] leading-[20px]">₵300</div>
               </div>
             </div>
           </div>
@@ -276,15 +276,15 @@ const activeCategory = ref("Men's Clothing")
           <img src="/images/p-4.png" class="w-full object-cover" />
           <div class="pt-[11px] px-[6px] pb-[6px]">
             <p
-              class="text-[#000000] text-[13.5px] mb-[6px] font-Ponnala overflow-hidden text-ellipsis whitespace-nowrap"
+              class="text-[#000000] text-[13.5px] mb-[6px] font-Ponnala overflow-hidden text-ellipsis whitespace-nowrap leading-[24px] tracking-[-0.17px]"
             >
               Multifunctional Thigh Trainer
             </p>
             <div class="flex justify-between items-center">
               <span class="text-[#6012B1] font-bold text-xl leading-[30px]">$9.95</span>
               <div>
-                <span class="block text-[#151515] text-[8px] leading-[14px]">Approx</span>
-                <span class="text-[13px] font-semibold text-[#151515] leading-[20px]">₵300</span>
+                <div class="block text-[#151515] text-[8px]   tracking-[-0.17px] mb-0">Approx</div>
+                <div class="text-[13px] font-semibold text-[#151515] leading-[20px]">₵300</div>
               </div>
             </div>
           </div>
@@ -312,33 +312,33 @@ const activeCategory = ref("Men's Clothing")
         </button>
 
         <button
-          class="border-[3px] border-[#817F8D] px-[9px] py-[4.5px] rounded-[4px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[16px]"
+          class="border-[3px] border-[#817F8D] px-[9px] py-[4px] rounded-[4px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[16px]"
         >
           1
         </button>
         <button
-          class="border-[3px] border-[#817F8D] px-[9px] py-[4.5px] rounded-[4px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[16px]"
+          class="border-[3px] border-[#817F8D] px-[9px] py-[4px] rounded-[4px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[16px]"
         >
           2
         </button>
         <button
-          class="border-[3px] border-[#817F8D] px-[9px] py-[4.5px] rounded-[4px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[16px]"
+          class="border-[3px] border-[#817F8D] px-[9px] py-[4px] rounded-[4px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[16px]"
         >
           3
         </button>
         <button
-          class="border-[3px] border-[#817F8D] px-[9px] py-[4.5px] rounded-[4px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[16px]"
+          class="border-[3px] border-[#817F8D] px-[9px] py-[4px] rounded-[4px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[16px]"
         >
           4
         </button>
         <button
-          class="border-[3px] border-[#817F8D] px-[9px] py-[4.5px] rounded-[4px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[16px]"
+          class="border-[3px] border-[#817F8D] px-[9px] py-[4px] rounded-[4px] text-white font-AlteHaas-Grotesk font-bold text-[15px] leading-[16px]"
         >
           1220
         </button>
 
         <button
-          class="border-[3px] border-[#817F8D] px-[9px] py-[2.4px] rounded-[4.5px] text-white"
+          class="border-[3px] border-[#817F8D] px-[9px] py-[2px] rounded-[4.5px] text-white"
         >
           <svg
             width="20"

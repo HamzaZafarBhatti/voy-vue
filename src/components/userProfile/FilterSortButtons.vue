@@ -51,7 +51,7 @@ const onMaxInput = (e: Event) => {
     <div class="w-[50%] relative">
       <button
         @click="onFilterClick"
-        class="text-[#151515] text-[10px] leading-none font-AlteHaas-Grotesk p-[5.5px] bg-[#FFFFFF] flex gap-[5px] w-full items-center text-center justify-center"
+        class="text-[#151515] text-[10px] leading-none font-bold p-[5.5px] bg-[#FFFFFF] flex gap-[5px] w-full items-center text-center justify-center"
       >
         Filter by
         <svg
@@ -76,7 +76,7 @@ const onMaxInput = (e: Event) => {
     <div class="w-[50%] relative">
       <button
         @click="onSortClick"
-        class="text-[#151515] text-[10px] leading-none font-AlteHaas-Grotesk p-[5.5px] bg-[#FFFFFF] flex gap-[5px] w-full items-center text-center justify-center"
+        class="text-[#151515] text-[10px] leading-none font-bold p-[5.5px] bg-[#FFFFFF] flex gap-[5px] w-full items-center text-center justify-center"
       >
         Sort by
         <svg
@@ -101,17 +101,17 @@ const onMaxInput = (e: Event) => {
     <!-- FILTER DROPDOWN -->
     <div
       v-if="showFilter"
-      class="absolute top-full left-0 w-full bg-white px-[20px] pt-[26px] pb-[18px] shadow-lg rounded-[10px] mt-2 z-10"
+      class="absolute top-full left-0 w-full bg-white px-[16px] pt-[26px] pb-[13px] shadow-lg rounded-[10px] mt-2.5 z-10"
     >
-      <h4 class="text-[16.8] mb-[26px] text-[#191c1f] tracking-wide font-DM-sans font-semibold">
+      <h4 class="text-[16.8] mb-[26px] text-[#191c1f] tracking-wide font-semibold leading-[19.2px]">
         FILTER BY PRICE
       </h4>
 
       <!-- Dual range slider -->
-      <div class="range-slider-wrap relative h-[3px] mb-[16px]">
+      <div class="range-slider-wrap relative h-[3px] mb-[21px]">
         <div class="absolute inset-0 rounded-full bg-[#E8D5F5]"></div>
         <div
-          class="absolute top-0 bottom-0 rounded-full bg-[#f0c6ca]"
+          class="absolute top-0 bottom-0 rounded-full bg-[#F0C6CA]"
           :style="{ left: minPercent() + '%', right: 100 - maxPercent() + '%' }"
         ></div>
         <input
@@ -133,12 +133,12 @@ const onMaxInput = (e: Event) => {
       </div>
 
       <!-- Price inputs -->
-      <div class="flex items-center gap-[10px] mb-[16px]">
+      <div class="flex items-center gap-[9.6px] mb-[16px]">
         <div
-          class="flex-1 border-[0.8px] border-gray-500 rounded-[2.4px] pl-[7px] pr-[5px] py-[12.85px]"
+          class="flex-1 border-[0.8px] border-[#999999] rounded-[2.4px] pl-[7px] pr-[5px] py-[9.8px]"
         >
           <div class="flex items-center justify-between">
-            <span class="text-[15.2] font-bold text-gray-900 font-DM-sans font-medium"
+            <span class="text-[15.2px] font-bold text-gray-900 font-DM-sans font-medium"
               >${{ formatPrice(priceMin) }}</span
             >
             <p class="text-[10px] text-gray-500 font-DM-sans">
@@ -150,10 +150,10 @@ const onMaxInput = (e: Event) => {
           >TO</span
         >
         <div
-          class="flex-1 border-[0.8px] border-gray-500 rounded-[2.4px] pl-[7px] pr-[5px] py-[12.85px]"
+          class="flex-1 border-[0.8px] border-[#999999] rounded-[2.4px] pl-[7px] pr-[5px] py-[9.8px]"
         >
           <div class="flex items-center justify-between">
-            <span class="text-[15.2] font-bold text-[#000000] font-DM-sans font-medium"
+            <span class="text-[15.2px] font-bold text-[#000000] font-DM-sans font-medium"
               >${{ formatPrice(priceMax) }}</span
             >
             <p class="text-[10px] text-gray-500 font-DM-sans">
@@ -165,7 +165,7 @@ const onMaxInput = (e: Event) => {
 
       <!-- Apply button -->
       <button
-        class="bg-[#000000] text-[#EFEFEF] w-full py-[10.5px] rounded-[2px] text-[14px] font-medium"
+        class="bg-[#000000] text-[#EFEFEF] w-full py-[5.5px] rounded-[2px] text-[14px] font-medium"
       >
         Apply Filter
       </button>
@@ -174,14 +174,14 @@ const onMaxInput = (e: Event) => {
     <!-- SORT DROPDOWN -->
     <div
       v-if="showSort"
-      class="absolute top-full left-0 w-full bg-white rounded-[10px] mt-2 z-10 shadow-lg"
+      class="absolute top-full left-0 w-full bg-white rounded-[10px] mt-2.5 z-10 shadow-lg"
     >
       <div class="flex flex-col">
         <label
           class="flex items-center justify-between px-[25px] py-[23px] border-b border-[#00000033] cursor-pointer"
           @click="selectedSort = 'default'"
         >
-          <span class="text-[#151515] text-[15px] font-medium">SORT BY DEFAULT</span>
+          <span class="text-[#151515] text-[15px] font-medium leading-none">SORT BY DEFAULT</span>
           <span class="radio-outer" :class="{ 'radio-active': selectedSort === 'default' }">
             <span v-if="selectedSort === 'default'" class="radio-inner"></span>
           </span>
@@ -190,7 +190,7 @@ const onMaxInput = (e: Event) => {
           class="flex items-center justify-between px-[25px] py-[23px] border-b border-[#00000033] cursor-pointer"
           @click="selectedSort = 'high-to-low'"
         >
-          <span class="text-[#151515] text-[15px] font-medium">Price (High to Low)</span>
+          <span class="text-[#151515] text-[15px] font-medium leading-none">Price (High to Low)</span>
           <span class="radio-outer" :class="{ 'radio-active': selectedSort === 'high-to-low' }">
             <span v-if="selectedSort === 'high-to-low'" class="radio-inner"></span>
           </span>
@@ -199,7 +199,7 @@ const onMaxInput = (e: Event) => {
           class="flex items-center justify-between px-[25px] py-[23px] cursor-pointer"
           @click="selectedSort = 'low-to-high'"
         >
-          <span class="text-[#151515] text-[15px] font-medium">Price (Low to High)</span>
+          <span class="text-[#151515] text-[15px] font-medium leading-none">Price (Low to High)</span>
           <span class="radio-outer" :class="{ 'radio-active': selectedSort === 'low-to-high' }">
             <span v-if="selectedSort === 'low-to-high'" class="radio-inner"></span>
           </span>

@@ -54,7 +54,7 @@ const sizeChart = [
 <template>
   <div>
     <!-- Header -->
-    <div class="flex items-center justify-between pt-[16.5px] pb-[15.19px]">
+    <div class="flex items-center justify-between pt-[16.5px] pb-[8.28px]">
       <button class="text-white">
         <svg
           width="19"
@@ -69,8 +69,8 @@ const sizeChart = [
           />
         </svg>
       </button>
-      <div class="flex items-center justify-between gap-[3px]">
-        <h1 class="text-white text-[14px] font-semibold">Jess Baker Store</h1>
+      <div class="flex items-center justify-between gap-[5.5px]">
+        <h1 class="text-white text-[14px] font-semibold leading-[21px]">Jess Baker Store</h1>
         <div class="rounded-full bg-[#9450D3] relative">
           <img
             src="/images/pexels-photo-5935258 11.svg"
@@ -88,12 +88,12 @@ const sizeChart = [
 
     <div class="bg-[#320D56] rounded-ss-[30px] rounded-se-[30px]">
       <!-- Main Product Image -->
-      <div class="w-full aspect-[4/5] overflow-hidden">
-        <img :src="mainImage" alt="Product" class="w-full h-full object-cover rounded-[30px]" />
+      <div class="w-full  overflow-hidden">
+        <img :src="mainImage" alt="Product" class="w-full h-full object-cover rounded-[30px] max-h-[382px]" />
       </div>
 
       <!-- Social Stats Bar -->
-      <div class="flex items-center justify-between pb-[8px] pt-[15px] px-[18px]">
+      <div class="flex items-center justify-between pb-[4px] pt-[11px] px-[18px]">
         <div class="flex items-center gap-[6.36px]">
           <!-- Heart -->
           <div class="flex items-center gap-[4px]">
@@ -187,7 +187,7 @@ const sizeChart = [
     <!-- Thumbnail Gallery -->
 
     <div class="pt-[12px] pb-[9px] bg-[#1A0533]">
-      <div class="grid grid-cols-5 gap-[8px]">
+      <div class="grid grid-cols-5 gap-[10px]">
         <button
           v-for="(thumb, i) in thumbnails"
           :key="i"
@@ -404,21 +404,21 @@ const sizeChart = [
               <tr
                 v-for="(row, index) in sizeChart"
                 :key="row.label"
-                :class="index % 2 === 0 ? 'bg-white' : 'bg-[#FAFAFA]'"
+                :class="index % 2 === 0 ? 'bg-white' : 'bg-white'"
               >
-                <td class="text-black py-[10px] px-[10px] border-b border-[#F0F0F0] bg-[#F6F6F6]">
+                <td class="text-black py-[10px] px-[10px] border-b  border-s border-[#F0F0F0] bg-[#F6F6F6]">
                   {{ row.label }}
                 </td>
-                <td class="text-black py-[10px] px-[10px] border-b border-[#F0F0F0]">
+                <td class="text-black py-[10px] px-[10px] border-b  border-s border-[#F0F0F0]">
                   {{ row.us }}
                 </td>
-                <td class="text-black py-[10px] px-[10px] border-b border-[#F0F0F0]">
+                <td class="text-black py-[10px] px-[10px] border-b  border-s border-[#F0F0F0]">
                   {{ row.chest }}
                 </td>
-                <td class="text-black py-[10px] px-[10px] border-b border-[#F0F0F0]">
+                <td class="text-black py-[10px] px-[10px] border-b  border-s border-[#F0F0F0]">
                   {{ row.waist }}
                 </td>
-                <td class="text-black py-[10px] px-[10px] border-b border-[#F0F0F0]">
+                <td class="text-black py-[10px] px-[10px] border-b  border-s border-[#F0F0F0]">
                   {{ row.hip }}
                 </td>
               </tr>
