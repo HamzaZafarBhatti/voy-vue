@@ -114,14 +114,14 @@ body {
   border-image-source: linear-gradient(90deg, #d97dcc 0%, #9542ff 64.6%);
 }
 .user-status::after {
-  content: '';
-  background-color: white;
-  width: 5px;
-  height: 5px;
-  border-radius: 100%;
-  position: absolute;
-  right: 0px;
-  top: 22px;
+    content: '';
+    background-color: white;
+    width: 6.47px;
+    height: 6.47px;
+    border-radius: 100%;
+    position: absolute;
+    right: 5px;
+    top: 15px;
 }
 .user-status-2::after {
   content: '';

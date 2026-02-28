@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import ShopPostGrid from '@/components/userProfile/ShopPostGrid.vue';
 import SocialPostGrid from '@/components/userProfile/SocialPostGrid.vue';
 import { ref } from 'vue'
@@ -23,7 +23,7 @@ const activeTab = ref(1)
                   />
                 </div>
               </div>
-              <div class="relative mt-[-15px] ml-[7px]">
+              <div class="relative mt-[-15px] ml-[6px]">
                 <img
                   src="../assets/img/verified-badge.svg"
                   class="w-[78px] h-[34px] rounded-full"
@@ -53,9 +53,9 @@ const activeTab = ref(1)
                   />
                 </svg>
               </div>
-              <div class="mb-[18px]">
+              <div class="mb-[15px] relative top-[-3px]">
                 <h3
-                  class="font-semibold text-xs leading-[100%] auth-name text-white leading-[18px]"
+                  class="font-semibold text-xs leading-[100%] auth-name text-white leading-[18px] pb-[6px]"
                 >
                   Jess Baker
                 </h3>
@@ -104,19 +104,19 @@ const activeTab = ref(1)
                     />
                   </svg>
                   <button
-                    class="bg-[#0865FE] font-inter font-bold text-[11.6px] rounded-[3px] text-white px-[6px]"
+                    class="bg-[#0865FE] font-bold text-[11.6px] rounded-[3px] text-white px-[4.38px] py-[1.2px] leading-none"
                   >
                     Chat
                   </button>
                 </div>
                 <div class="flex justify-center flex-col flex- gap-[5px] items-center">
-                  <h4 class="font-inter font-bold text-[17.6px] text-white leading-none">100</h4>
-                  <p class="font-inter font-bold text-[11.6px] text-white">Followers</p>
+                  <h4 class=" font-bold text-[17.6px] text-white leading-none">100</h4>
+                  <p class=" font-bold text-[11.6px] text-white">Followers</p>
                 </div>
 
                 <div class="flex justify-center flex-col flex- gap-[5px] items-center">
                   <button
-                    class="bg-[#9450D3] font-inter font-bold text-[10.83px] rounded-full text-white px-[6px] w-[88px] h-[24px]"
+                    class="bg-[#9450D3]  font-bold text-[10.83px] rounded-full text-white px-[6px] w-[86px] h-[24px]"
                   >
                     Follow
                   </button>
@@ -126,7 +126,7 @@ const activeTab = ref(1)
           </div>
           <!-- Tab Icons -->
           <div
-            class="flex justify-around items-center relative mt-2 max-w-[161px] mx-auto pb-[9px] border-b-[1px] border-white"
+            class="flex justify-around items-center relative mt-2 max-w-[161px] mx-auto pb-[9px] border-b-[1.2px] border-white"
           >
             <button
               class="tab-btn text-3xl"
@@ -215,7 +215,7 @@ const activeTab = ref(1)
 
             <!-- Pink underline -->
             <div
-              class="absolute bottom-[-1px] w-1/2 h-[1px] bg-[#FF51EE] transition-all duration-300"
+              class="absolute bottom-[-1.3px] w-1/2 h-[2px] bg-[#FF51EE] transition-all duration-300 rounded-full"
               :class="activeTab === 1 ? 'left-0' : 'left-1/2'"
             ></div>
           </div>
